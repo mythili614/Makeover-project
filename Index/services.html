@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Services - Beauty Booking</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Roboto', sans-serif;
+}
+
+body{
+    background:#f1dbe9;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+    background:#60324e;
+    padding:15px 40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.navbar ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+.navbar ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:16px;
+    font-weight:500;
+}
+
+.search-box input{
+    padding:6px 12px;
+    border-radius:20px;
+    border:none;
+    outline:none;
+}
+
+/* ===== SERVICES SECTION ===== */
+.services-title{
+    text-align:center;
+    font-size:28px;
+    font-weight:700;
+    margin:40px 0;
+}
+
+.services-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    padding:0 30px 60px;
+}
+
+.service-card{
+    background:white;
+    border-radius:12px;
+    box-shadow:0 6px 12px rgba(0,0,0,0.2);
+    overflow:hidden;
+    text-align:center;
+}
+
+.service-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.service-content{
+    padding:30px;
+}
+
+.service-content h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.service-content p{
+    font-size:14px;
+    color:#555;
+    margin-bottom:15px;
+}
+
+.book-btn{
+    background:#4169e1;   /* ✅ Royal Blue Color */
+    color:white;
+    border:none;
+    padding:10px 24px;
+    border-radius:6px;
+    cursor:pointer;
+    display:inline-block;
+    text-decoration:none;
+    font-weight:500;
+}
+
+/* ✅ Hover Effect */
+.book-btn:hover{
+    background:#27408b;   /* ✅ Dark Royal Blue */
+}
+/* ===== FOOTER ===== */
+.footer{
+    background:#60324e;
+    color:white;
+    padding:40px 0 20px;
+}
+
+.footer-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    padding:0 40px;
+}
+
+.footer h4{
+    margin-bottom:15px;
+}
+
+.footer ul{
+    list-style:none;
+}
+
+.footer ul li{
+    margin-bottom:8px;
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:30px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<div class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search">
+    </div>
+</div>
+
+<!-- ===== SERVICES TITLE ===== -->
+<h2 class="services-title">SERVICES</h2>
+
+<!-- ===== SERVICES CARDS ===== -->
+<div class="services-container">
+
+    <!-- ✅ 1 -->
+    <div class="service-card">
+        <img src="g1.jpg">
+        <div class="service-content">
+            <h3>Bridal Makeup</h3>
+            <strong> An Exceptional Bridal Makeup,
+              Hairdressing, Outfit, And Jewellery
+              Make You Look Dazzling On Life's
+              Unforgettable day At The wedding.</strong>
+            <a href="bridal.html" class="book-btn">BOOK NOW</a>
+        </div>
+    </div>
+
+    <!-- ✅ 2 -->
+    <div class="service-card">
+        <img src="party n.jpg">
+        <div class="service-content">
+            <h3>Party Makeup</h3>
+            <strong> Parties Play a Significant Role In 
+              Every Women Life.Females are Over 
+              The Moon And Pen Down Plans To Get Ready Ideally.</strong>
+            <a href="bridal.html" class="book-btn">BOOK NOW</a>
+        </div>
+    </div>
+
+    <!-- ✅ 3 -->
+    <div class="service-card">
+        <img src="saree drap.jpg">
+        <div class="service-content">
+            <h3>Saree Draping</h3>
+            <strong> The Ethnic And Most Prevalent Traditional Wear
+              For Any Indian Woman Is The Saree.</strong>
+            <a href="bridal.html" class="book-btn">BOOK NOW</a>
+        </div>
+    </div>
+
+    <!-- ✅ 4 -->
+    <div class="service-card">
+        <img src="hair brid.jpg">
+        <div class="service-content">
+            <h3>Hairstyling</h3>
+            <strong> Holding Hands With A Professional Hairstylist
+              Is Essential For Any Special Occasion.</strong>
+            <a href="bridal.html" class="book-btn">BOOK NOW</a>
+        </div>
+    </div>
+
+    <!-- ✅ 5 -->
+    <div class="service-card">
+        <img src="bridel3.jpeg">
+        <div class="service-content">
+            <h3>Bridal Family Package</h3>
+            <strong> A Wedding Is An Extraordinary Occasion
+              And The Most Awaited Day In Life.</strong>
+            <a href="bridal.html" class="book-btn">BOOK NOW</a>
+        </div>
+    </div>
+
+    <!-- ✅ 6 -->
+    <div class="service-card">
+        <img src="party n2.jpg">
+        <div class="service-content">
+            <h3>Party Bulk Package</h3>
+            <strong>  Makeup Adds Beauty To Life And Is An
+              Indispensable Part Of Women's Life.</strong>
+            <a href="bridal.html" class="book-btn">BOOK NOW</a>
+        </div>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div class="footer">
+    <div class="footer-container">
+
+        <div>
+            <h4>Quick Links</h4>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Portfolio</li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Services</h4>
+            <ul>
+                <li>Mission</li>
+                <li>Features</li>
+                <li>Pricing</li>
+                <li>Industries</li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Other Links</h4>
+            <ul>
+                <li>Blog</li>
+                <li>Testimonials</li>
+                <li>Privacy Policy</li>
+                <li>Terms of Service</li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Contact Info</h4>
+            <p>Hyderabad, Telangana</p>
+            <p>+91 98765 43210</p>
+            <p>booking@gmail.com</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2008–2025 Makeover Booking Service | All Rights Reserved
+    </div>
+</div>
+
+</body>
+</html>

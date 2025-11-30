@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Portfolio - Beauty Booking</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Roboto', sans-serif;
+}
+
+
+
+/* ===== NAVBAR ===== */
+.navbar{
+    background:#60324e;
+    padding:15px 40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.navbar ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+.navbar ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:15px;
+}
+
+.search-box input{
+    padding:6px 12px;
+    border-radius:20px;
+    border:none;
+}
+
+/* ===== PORTFOLIO GRID ===== */
+.portfolio{
+    padding:30px;
+}
+
+
+/* ===== NAVBAR ===== */
+.navbar{
+    background:#60324e;
+    padding:15px 40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.navbar ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+.navbar ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:15px;
+}
+
+.search-box input{
+    padding:6px 12px;
+    border-radius:20px;
+    border:none;
+}
+
+/* ===== PORTFOLIO GRID ===== */
+.portfolio{
+    padding:30px 40px 60px;
+}
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:8px;
+}
+
+.portfolio-grid img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:4px;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+    background:#60324e;
+    color:white;
+    padding:40px 0 20px;
+}
+
+.footer-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    padding:0 40px;
+}
+
+.footer h4{
+    margin-bottom:15px;
+}
+
+.footer ul{
+    list-style:none;
+}
+
+.footer ul li{
+    margin-bottom:8px;
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:30px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<div class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio1.html">Portfolio</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search">
+    </div>
+</div>
+
+<!-- ===== PORTFOLIO IMAGES ===== -->
+<div class="portfolio">
+    <div class="portfolio-grid">
+        <img src="bridel2.jpeg">
+        <img src="bridel3.jpeg">
+        <img src="face1-removebg-preview.png">
+        <img src="bridel5.jpg">
+        <img src="bridel6.jpg">
+        <img src="party w2.jpg">
+        <img src="hairst2-removebg-preview.png">
+        <img src="party w.jpg">
+        <img src="hairst.jpg">
+        <img src="party ma1.jpg">
+        <img src="party saree.jpg">
+        <img src="hair brid.jpg">
+        <img src="chudi.jpg">
+        <img src="chudi2.jpg">
+        <img src="g1.jpg">
+    </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div class="footer">
+    <div class="footer-container">
+
+        <div>
+            <h4>Quick Links</h4>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Portfolio</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Services</h4>
+            <ul>
+                <li>Mission</li>
+                <li>Integration</li>
+                <li>Features</li>
+                <li>Pricing</li>
+                <li>Industries</li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Other Links</h4>
+            <ul>
+                <li>Blog</li>
+                <li>Testimonials</li>
+                <li>Privacy Policy</li>
+                <li>Cancellation and Refund</li>
+                <li>Terms of Service</li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Contact Info</h4>
+            <p>8-2-686/D/9, Banjara Hills, Hyderabad</p>
+            <p>+91-869-011-0111</p>
+            <p>bookingmyra@gmail.com</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2008–2025 Makeover booking service. All Rights Reserved
+    </div>
+</div>
+
+</body>
+</html>
+
+

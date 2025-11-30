@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bridal Packages - Beauty Booking</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Roboto', sans-serif;
+}
+
+body{
+    background:#f1dbe9;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+    background:#60324e;
+    padding:15px 40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.navbar ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+.navbar ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:16px;
+    font-weight:500;
+}
+
+.search-box input{
+    padding:6px 12px;
+    border-radius:20px;
+    border:none;
+    outline:none;
+}
+
+/* ===== TITLE ===== */
+.page-title{
+    text-align:center;
+    font-size:26px;
+    font-weight:700;
+    margin:40px 0 20px;
+}
+
+/* ===== TABS ===== */
+.tabs{
+    background:white;
+    max-width:1100px;
+    margin:0 auto 30px;
+    display:flex;
+    justify-content:space-around;
+    padding:12px;
+    border-radius:6px;
+}
+
+.tabs span{
+    font-size:14px;
+    cursor:pointer;
+}
+
+.tabs .active{
+    border-bottom:2px solid purple;
+    padding-bottom:4px;
+}
+
+/* ===== PACKAGES ===== */
+.package-container{
+    max-width:1100px;
+    margin:auto;
+    padding:0 20px 50px;
+}
+
+.package-card{
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px;
+    border-radius:8px;
+    margin-bottom:20px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.package-card img{
+    width:90px;
+    height:90px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.package-content{
+    flex:1;
+    margin-left:20px;
+}
+
+.package-content h3{
+    font-size:18px;
+    margin-bottom:6px;
+}
+
+.package-content p{
+    font-size:14px;
+    color:#555;
+    margin-bottom:4px;
+}
+
+.book-btn{
+     background:#7a2c5e;
+    color:white;
+    border:none;
+    padding:10px 22px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+    background:#60324e;
+    color:white;
+    padding:40px 0 20px;
+}
+
+.footer-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    padding:0 40px;
+}
+
+.footer h4{
+    margin-bottom:15px;
+}
+
+.footer ul{
+    list-style:none;
+}
+
+.footer ul li{
+    margin-bottom:8px;
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:30px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<div class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search">
+    </div>
+</div>
+
+<!-- ===== TITLE ===== -->
+<h2 class="page-title">BRIDAL PACKAGES</h2>
+
+<!-- ===== TABS ===== -->
+<div class="tabs">
+    <span>ALL SERVICES</span>
+    <span class="active">BRIDAL PACKAGES</span>
+    <span>PARTY MAKEUP</span>
+    <span>SAREE DRAPING</span>
+    <span>HAIRSTYLING</span>
+</div>
+
+<!-- ===== PACKAGES ===== -->
+<div class="package-container">
+
+    <div class="package-card">
+        <img src="g1.jpg">
+        <div class="package-content">
+            <h3>Bridal Makeup Luxury Package</h3>
+            <p>8 Hr</p>
+            <p>Rs 25000 Negotiable</p>
+        </div>
+      <!-- ✅ THIS DOES THE REDIRECT -->
+  <a href="schedule.html" class="book-btn">BOOK NOW</a>
+</div>
+    <div class="package-card">
+        <img src="bridel3.jpeg">
+        <div class="package-content">
+            <h3>Bridal Makeup Premium Package</h3>
+            <p>6 Hr</p>
+            <p>Rs 18000 Negotiable</p>
+        </div>
+      <a href="schedule.html" class="book-btn">BOOK NOW</a>
+</div>
+    <div class="package-card">
+        <img src="hair brid.jpg">
+        <div class="package-content">
+            <h3>Basic Bridal Makeup Package</h3>
+            <p>2 Hr</p>
+            <p>Rs 12000 Negotiable</p>
+        </div>
+       <a href="schedule.html" class="book-btn">BOOK NOW</a>
+</div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div class="footer">
+    <div class="footer-container">
+
+        <div>
+            <h4>Quick Links</h4>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Portfolio</li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Services</h4>
+            <ul>
+                <li>Mission</li>
+                <li>Features</li>
+                <li>Pricing</li>
+                <li>Industries</li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Other Links</h4>
+            <ul>
+                <li>Blog</li>
+                <li>Testimonials</li>
+                <li>Privacy Policy</li>
+                <li>Terms of Service</li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Contact Info</h4>
+            <p>Hyderabad, Telangana</p>
+            <p>+91 98765 43210</p>
+            <p>booking@gmail.com</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2008–2025 Makeover Booking Service | All Rights Reserved
+    </div>
+</div>
+
+</body>
+</html>

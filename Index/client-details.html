@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Client Details - Booking</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Roboto', sans-serif;
+}
+
+body{
+  background:#f1dbe9;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+  background:#60324e;
+  padding:15px 40px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  color:white;
+}
+
+/* ===== MAIN BOX ===== */
+.main-box{
+  background:white;
+  max-width:1100px;
+  margin:40px auto;
+  padding:40px;
+  border-radius:10px;
+}
+
+.back{
+  text-decoration:none;
+  color:#000;
+  font-size:14px;
+}
+
+/* ===== GRID ===== */
+.grid{
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:40px;
+  margin-top:20px;
+}
+
+h3{
+  margin-bottom:15px;
+}
+
+/* ===== FORM ===== */
+.form-box label{
+  font-size:14px;
+  display:block;
+  margin-top:15px;
+  margin-bottom:6px;
+}
+
+.form-box input,
+.form-box textarea{
+  width:100%;
+  padding:8px;
+  border:1px solid #aaa;
+  border-radius:4px;
+}
+
+.form-box textarea{
+  height:80px;
+}
+
+.phone-group{
+  display:flex;
+  gap:10px;
+}
+
+.phone-group select{
+  padding:8px;
+  border:1px solid #aaa;
+  border-radius:4px;
+}
+
+.login-box{
+  background:#efefef;
+  padding:10px;
+  font-size:13px;
+  margin-bottom:15px;
+}
+
+/* ===== BOOKING DETAILS ===== */
+.details-box p{
+  font-size:14px;
+  margin-bottom:8px;
+}
+
+.book-btn{
+  display:block;
+  background:#7d88ff;
+  color:white;
+  border:none;
+  padding:10px;
+  border-radius:6px;
+  width:100%;
+  margin-top:15px;
+  text-align:center;
+  text-decoration:none;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  background:#60324e;
+  color:white;
+  padding:40px 20px 20px;
+  margin-top:60px;
+}
+.footer-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+.footer h4{
+  margin-bottom:12px;
+}
+.footer p{
+  font-size:14px;
+  margin-bottom:6px;
+}
+.footer-bottom{
+  text-align:center;
+  margin-top:30px;
+  font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<div class="navbar">
+  Client Details
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="main-box">
+
+  <a href="schedule.html" class="back">← Back</a>
+
+  <div class="grid">
+
+    <!-- ✅ CLIENT FORM -->
+    <div class="form-box">
+
+      <h3>Client Details</h3>
+
+      <div class="login-box">
+        Already Have An Account? <a href="#">Log In</a> For Faster Booking.
+      </div>
+
+      <label>Name *</label>
+      <input type="text">
+
+      <label>Email *</label>
+      <input type="email">
+
+      <label>Phone Number</label>
+      <div class="phone-group">
+        <select>
+          <option>+91</option>
+        </select>
+        <input type="text">
+      </div>
+
+      <label>Street *</label>
+      <input type="text">
+
+      <label>Apt / Floor No.</label>
+      <input type="text">
+
+      <label>City *</label>
+      <input type="text">
+
+      <label>State</label>
+      <input type="text">
+
+      <label>Add Your Message</label>
+      <textarea></textarea>
+
+    </div>
+
+    <!-- ✅ BOOKING DETAILS -->
+    <div class="details-box">
+
+      <h3>Booking Details</h3>
+
+      <p>Bridal Makeup Luxury Package</p>
+      <p>Rs 25000 Negotiable</p>
+      <p>12 May 2025 At 2:30 Am</p>
+      <p>Client's Place</p>
+      <p>Admin</p>
+      <p>8 Hr</p>
+
+      <hr style="margin:15px 0;">
+
+      <p><b>Payment Details</b></p>
+      <p>Rs 25000 Negotiable</p>
+
+      <p style="font-size:13px;margin-top:10px;">
+        By Completing Your Booking, You Agree To Receive Related SMS Notifications.
+      </p>
+
+      <!-- ✅ FINAL BOOK BUTTON -->
+      <a href="#" class="book-btn">Book Now</a>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div class="footer">
+
+  <div class="footer-grid">
+
+    <div>
+      <h4>Quick Links</h4>
+      <p>Home</p>
+      <p>About</p>
+      <p>Services</p>
+      <p>Portfolio</p>
+    </div>
+
+    <div>
+      <h4>Services</h4>
+      <p>Mission</p>
+      <p>Features</p>
+      <p>Pricing</p>
+      <p>Industries</p>
+    </div>
+
+    <div>
+      <h4>Other Links</h4>
+      <p>Blog</p>
+      <p>Testimonials</p>
+      <p>Privacy Policy</p>
+      <p>Terms of Service</p>
+    </div>
+
+    <div>
+      <h4>Contact Info</h4>
+      <p>Hyderabad, Telangana</p>
+      <p>+91 98765 43210</p>
+      <p>booking@gmail.com</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2008–2025 Makeover booking service. All Rights Reserved
+  </div>
+
+</div>
+
+</body>
+</html>

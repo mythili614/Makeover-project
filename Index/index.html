@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beauty Navigation</title>
+  <!-- Roboto Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <!-- Font Awesome for icons -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    html{
+  scroll-behavior: smooth;
+}
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      background-color: #583150;
+      color: white; 
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .navbar .logo img {
+      height: 40px;
+    }
+
+    .navbar .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar .logo-text h1 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #E877CF;
+    }
+
+    .navbar .logo-text span {
+      font-size: 0.8rem;
+      color: #fff;
+    }
+
+    .navbar nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .navbar nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .navbar nav a:hover {
+      color: #E877CF;
+    }
+
+    .navbar .actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .search-box {
+      position: relative;
+    }
+
+    .search-box input {
+      padding: 0.5rem 2rem 0.5rem 0.75rem;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+    }
+
+    .search-box i {
+      position: absolute;
+      right: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #583150;
+    }
+
+    .user-icon {
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar nav {
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: 1rem;
+      }
+
+      .navbar .actions {
+        margin-top: 1rem;
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+
+.promo-banner {
+  background-color: #E877CF;
+  padding: 3rem 2rem;
+  color: white;
+}
+
+.promo-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.promo-text {
+  flex: 1;
+}
+
+.promo-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.promo-text p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.promo-btn {
+  background-color: #583150;
+  color:white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.promo-btn:hover {
+  background-color: #3e1f3a;
+}
+
+.promo-image img {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  .promo-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .promo-image img {
+    max-width: 100%;
+  }
+}
+
+
+.service-grid {
+  background-color: #f0f8ff;
+ 
+  text-align: center;
+}
+
+.grid-container {
+    
+  display: flex;
+  flex-wrap: wrap;
+  gap:2rem;
+  justify-content: center;
+}
+
+.grid-item {
+  background-color: rgb(112, 205, 236);
+ 
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 380px;
+  transition: transform 0.3s ease;
+}
+
+
+.grid-item img {
+  width: 80%;
+  border-radius: 8px;
+ 
+}
+
+.grid-item h3 {
+
+  color: #583150;
+}
+
+.book-btn {
+  display: inline-block;
+  background-color: #583150;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #E877CF;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+    /* ===== MAIN SECTION ===== */
+.why-container{
+  max-width:1200px;
+  margin:60px auto;
+  background:#f07bd3;          /* ✅ Same Pink Background */
+  border-radius:15px;
+  padding:50px;
+  display:flex;
+  align-items:center;
+ 
+}
+
+/* ===== LEFT IMAGE ===== */
+.why-image img{
+  width:320px;
+  border-radius:0 0 0 0;
+  object-fit:cover;
+}
+
+/* ===== RIGHT CONTENT ===== */
+.why-content{
+  flex:1;
+  color:#000;
+}
+
+.why-content h2{
+  font-size:26px;             /* ✅ Same Font Size */
+  font-weight:700;
+  margin-bottom:25px;
+}
+
+.why-content ul{
+  list-style:none;
+}
+
+.why-content ul li{
+  font-size:17px;             /* ✅ Same Text Size */
+  margin-bottom:18px;
+  line-height:28px;
+  position:relative;
+  padding-left:22px;
+}
+
+/* Bullet Dot */
+.why-content ul li::before{
+  content:"•";
+  position:absolute;
+  left:0;
+  top:0;
+  font-size:22px;
+}
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+      }
+
+      .text-box, .image-box {
+        max-width: 100%;
+      }
+    }
+
+
+
+
+    body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#e9dde6;
+}
+
+/* Main Wrapper */
+.bridal-wrapper{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    padding:50px;
+}
+
+/* Left & Right Images */
+.side-img img{
+    width:230px;
+    object-fit:contain;
+}
+
+/* Center Package Box */
+.packages{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+}
+
+/* Single Package Card */
+.package-card{
+    background:#7fd1e3;
+    padding:35px 40px;
+    width:420px;
+    border-radius:6px;
+}
+
+.package-card h2{
+    font-size:30px;
+    margin:0;
+    color:#000;
+    font-weight:700;
+}
+
+.package-card p{
+    font-size:18px;
+    margin:12px 0;
+}
+
+.divider{
+    height:2px;
+    background:#fff;
+    margin:20px 0;
+}
+
+.time-price{
+    font-size:20px;
+    font-weight:bold;
+    line-height:1.8;
+    color:#fff;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 22px;
+    border:none;
+    background:#e6e6e6;
+    font-size:16px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#e9dde6;
+}
+
+/* Section Wrapper */
+.review-section{
+    padding:50px;
+}
+
+/* Review Grid */
+.review-container{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:30px;
+}
+
+/* Review Card */
+.review-card{
+    background:#fff;
+    padding:35px 30px;
+    border-radius:12px;
+    border:1.5px solid #111;
+    box-shadow:0 0 0 rgba(0,0,0,0.0);
+}
+
+/* Rating Card Center Align */
+.center-card{
+    text-align:center;
+}
+
+/* Rating Number */
+.rating-number{
+    font-size:40px;
+    font-weight:bold;
+}
+
+/* Star Styling */
+.stars{
+    color:#ff7a00;
+    font-size:22px;
+    margin:10px 0;
+}
+
+/* Google Text */
+.google-text{
+    font-size:22px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+.booking{
+    font-size:22px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+/* Profile */
+.profile{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.avatar{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#7c83ff;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.name{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.review-text{
+    margin-top:25px;
+    font-size:20px;
+    font-weight:600;
+    line-height:1.5;
+}
+
+/* Slider Arrows (UI Only) */
+.slider-btns{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+}
+
+.slider-box{
+    background:#222;
+    color:#fff;
+    padding:8px 20px;
+    border-radius:22px;
+    font-size:20px;
+}
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f2e6ef;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+    background:#5b2f4f;
+    color:#fff;
+    padding:50px 80px 25px;
+}
+
+/* Footer Grid */
+.footer-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:50px;
+}
+
+/* Footer Headings */
+.footer h3{
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+/* Footer Links */
+.footer ul{
+    list-style:none;
+    padding:0;
+}
+
+.footer ul li{
+    margin-bottom:12px;
+    font-size:18px;
+}
+
+/* Contact Info */
+.contact-item{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:18px;
+    font-size:18px;
+}
+
+/* Divider Line */
+.footer-line{
+    height:1px;
+    background:#caa6bb;
+    margin:30px 0 20px;
+}
+
+/* Bottom Footer */
+.footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:16px;
+}
+
+/* Social Icons */
+.social-icons{
+    display:flex;
+    gap:22px;
+    font-size:20px;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f3e5ee;
+}
+
+.service {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,  1fr));
+ 
+ 
+ 
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.service-card img {
+  width: 300%;
+  height: 100px;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  margin: 15px 10px 8px;
+}
+
+.service-card p {
+  font-size: 14px;
+ 
+  color: #444;
+}
+
+.btn {
+  display: inline-block;
+ 
+  background: #7b2a67;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: #5e1f4e;
+}
+
+
+
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+     <img src="beautylogo.jpg" alt="Logo" />
+      <div class="logo-text">
+        
+      </div>
+    </div>
+
+   <nav>
+  <a href="index.html">Home</a>
+ <a href="services.html">Service</a>    
+  <a href="portfolio1.html">Portfolio</a>
+  <a href="about.html">About Us</a>
+ <a href="contact.html">Contact</a>
+</nav>
+
+
+
+  
+    <div class="actions">
+      <div class="search-box">
+        <input type="text" placeholder="Search" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <i class="fa-solid fa-user user-icon"></i>
+     
+    </div>
+  </header>
+  <section id="bridal-promo" class="promo-banner" data-aos="fade-up">
+  <div class="promo-content">
+    <div class="promo-text">
+      <h2>Quality Bridal Makeup & Hair Styling Services</h2>
+      <p>Certified Professionals To Cater Your Bridal Makeup & Hairstyling Needs</p>
+    <a href="bridal.html" class="promo-btn">Request Quote ></a>
+    </div>
+    <div class="promo-image">
+      <img src="first.png" alt="Bridal Makeup" >
+    </div>
+  </div>
+</section>
+
+ 
+  <div class="grid-container">
+    <div class="grid-item">
+      
+      <h3>Bridal Makeup</h3>
+     <a href="bridal.html" class="promo-btn">BOOK NOW</a>
+      <img src="bridel2.jpeg" alt="Bridal Makeup" />
+      
+    </div>
+    <div class="grid-item">
+      
+      <h3>Party Makeup</h3>
+      <a href="bridal.html" class="promo-btn">BOOK NOW</a>
+      <img src="party w2.jpg" alt="Party Makeup" />
+      
+    </div>
+    <div class="grid-item">
+     
+      <h3>Hair Styling</h3>
+       <a href="bridal.html" class="promo-btn">BOOK NOW</a>
+       <img src="hairst.jpg" alt="Hair Styling" />
+    </div>
+    <div class="grid-item">
+      
+      <h3>Saree Draping</h3>
+       <a href="bridal.html" class="promo-btn">BOOK NOW</a>
+      <img src="saree drap.jpg" alt="Saree Draping" />
+    </div>
+  </div>
+</section>
+
+
+
+<div class="why-container">
+  <div class="why-image">
+    <img src="makeover-removebg-preview.png" alt="Makeup Model">
+  </div>
+
+  
+  <div class="why-content">
+    <h2>Why Choose Us ?</h2>
+    <ul>
+      <li>Industry Standard Quality Products</li>
+
+      <li>
+        Bridal Makeup And Hairstyling Services Provided By Friendly
+        Certified Professionals With Advanced Techniques
+      </li>
+
+      <li>
+        Certified Bridal Makeup And Hairstyling Professionals
+        At Affordable Budgets
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+
+  <div class="bridal-wrapper">
+
+    <!-- LEFT IMAGE -->
+    <div class="side-img">
+        <img src="lipstick1.png.png" alt="Makeup">
+    </div>
+
+    <!-- CENTER PACKAGES -->
+    <div class="packages">
+
+        <!-- PACKAGE 1 -->
+        <div class="package-card">
+            <h2>Bridal Makeup Luxury<br>Package</h2>
+            <p>Indulge In Bridal Elegance: Experience Our Luxury Makeup Package!</p>
+
+            <div class="divider"></div>
+
+            <div class="time-price">
+                8 Hr <br>
+                Rs 25000 Negotiable
+            </div>
+
+            <button>Request To Book</button>
+        </div>
+
+        <!-- PACKAGE 2 -->
+        <div class="package-card">
+            <h2>Bridal Makeup Premium<br>Package</h2>
+            <p>Indulge In Bridal Elegance: Experience Our Luxury Makeup Package!</p>
+
+            <div class="divider"></div>
+
+            <div class="time-price">
+                6 Hr <br>
+                Rs 20000 Negotiable
+            </div>
+
+            <button>Request To Book</button>
+        </div>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="side-img">
+        <img src="lipstick2.png.png" alt="Makeup">
+    </div>
+
+</div>
+<section class="review-section">
+
+  <div class="review-container">
+
+    <!-- CARD 1 -->
+    <div class="review-card center-card">
+        <div class="rating-number">4.7</div>
+
+        <div class="stars">★★★★★</div>
+
+        <div class="google-text">Google Overall<br>Rating</div>
+
+        <div class="booking">Booking Myna</div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="review-card">
+        <div class="profile">
+            <div class="avatar">M</div>
+            <div class="name">Manoj Ponda</div>
+        </div>
+
+        <div class="stars">★★★★★</div>
+
+        <div class="review-text">
+            Very Quick Response With<br>Good Artist
+        </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="review-card">
+        <div class="profile">
+            <div class="avatar">S</div>
+            <div class="name">Shanvi Sharav</div>
+        </div>
+
+        <div class="stars">★★★★★</div>
+
+        <div class="review-text">
+            Very Quick Response With<br>Good Artist
+        </div>
+    </div>
+
+  </div>
+
+  <!-- SLIDER BUTTON MOCK -->
+  <div class="slider-btns">
+      <div class="slider-box">‹ &nbsp;&nbsp; ›</div>
+  </div>
+
+</section>
+
+<!-- ================= FOOTER START ================= -->
+<footer class="footer">
+
+    <div class="footer-grid">
+
+        <!-- COLUMN 1 -->
+        <div>
+            <h3>Quick Links</h3>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Portfolio</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+
+        <!-- COLUMN 2 -->
+        <div>
+            <h3>Services</h3>
+            <ul>
+                <li>Mission</li>
+                <li>Integrations</li>
+                <li>Features</li>
+                <li>Pricing</li>
+                <li>Industries</li>
+            </ul>
+        </div>
+
+        <!-- COLUMN 3 -->
+        <div>
+            <h3>Other Links</h3>
+            <ul>
+                <li>Blog</li>
+                <li>Testimonials</li>
+                <li>Privacy Policy</li>
+                <li>Cancellation and Refund</li>
+                <li>Terms of Service</li>
+            </ul>
+        </div>
+
+        <!-- COLUMN 4 -->
+        <div>
+            <h3>Contact Info</h3>
+
+            <div class="contact-item">
+                📍 8-2-686/DR/9, Banjara Hills, Hyderabad, Telangana 500034
+            </div>
+
+            <div class="contact-item">
+                📞 +91-869-011-0011
+            </div>
+
+            <div class="contact-item">
+                ✉ bookingmyna@gmail.com
+            </div>
+        </div>
+
+    </div>
+
+    <!-- LINE -->
+    <div class="footer-line"></div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+        <div>
+            © 2008–2025 Makeover booking service. All Rights Reserved
+        </div>
+
+        <div class="social-icons">
+            📷 🐦 ❌ 📘
+        </div>
+    </div>
+
+</footer>
+<!-- ================= FOOTER END ================= -->
+
+
+
+
+</body>
+</html>
